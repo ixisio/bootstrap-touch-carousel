@@ -25,7 +25,7 @@
 
   var Carousel = function (element, options) {
     this.$element    = $(element)
-    this.$indicators = this.$element.find('.carousel-indicators')
+    this.$indicators = this.$element.find('.touch-carousel-indicators')
     this.options     = options
     this.paused      =
     this.sliding     =
@@ -208,7 +208,7 @@
   })
 
   $(window).on('load', function () {
-    $('[data-ride="carousel"]').each(function () {
+    $('[data-ride="touch-carousel"]').each(function () {
       var $carousel = $(this)
       $carousel.carousel($carousel.data())
     })

@@ -36,11 +36,11 @@
 // --------------------------------------------------
 
 // Wrapper for the slide container and indicators
-.carousel {
+.touch-carousel {
   position: relative;
 }
 
-.carousel-inner {
+.touch-carousel-inner {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -97,7 +97,7 @@
 // Left/right controls for nav
 // ---------------------------
 
-.carousel-control {
+.touch-carousel-control {
   position: absolute;
   top: 0;
   left: 0;
@@ -169,7 +169,7 @@
 // Add an unordered list with the following class and add a list item for each
 // slide your carousel holds.
 
-.carousel-indicators {
+.touch-carousel-indicators {
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -201,7 +201,7 @@
 // Optional captions
 // -----------------------------
 // Hidden by default for smaller viewports
-.carousel-caption {
+.touch-carousel-caption {
   position: absolute;
   left: 15%;
   right: 15%;
@@ -222,7 +222,7 @@
 @media screen and (min-width: @screen-sm-min) {
 
   // Scale up the controls a smidge
-  .carousel-control {
+  .touch-carousel-control {
     .glyphicons-chevron-left,
     .glyphicons-chevron-right,
     .icon-prev,
@@ -236,14 +236,14 @@
   }
 
   // Show and left align the captions
-  .carousel-caption {
+  .touch-carousel-caption {
     left: 20%;
     right: 20%;
     padding-bottom: 30px;
   }
 
   // Move up the indicators
-  .carousel-indicators {
+  .touch-carousel-indicators {
     bottom: 20px;
   }
 }
@@ -253,7 +253,7 @@
 @media screen and (max-width: @screen-sm-min) {
 
   // Show and left align the captions
-  .carousel-caption {
+  .touch-carousel-caption {
     display: none
   }
 }
