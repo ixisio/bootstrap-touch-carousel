@@ -4,25 +4,49 @@
     A set of useful LESS mixins
     More info at: http://lesselements.com
   ---------------------------------------------------*/
-/* line 39, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 70, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel {
-  position: relative;
-}
-/* line 43, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
-.touch-carousel-inner {
   position: relative;
   overflow: hidden;
   width: 100%;
+  -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-/* line 48, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 80, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.touch-carousel-inner {
+  overflow: hidden;
+  -webkit-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+  -moz-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+  -ms-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+  transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 86, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-inner > .item {
-  display: none;
   position: relative;
-  -webkit-transition: left 0.6s ease-in-out;
-  -moz-transition: left 0.6s ease-in-out;
-  transition: left 0.6s ease-in-out;
+  float: left;
+  display: block;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
 }
-/* line 55, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 95, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-inner > .item > img,
 .touch-carousel-inner > .item > a > img {
   display: block;
@@ -30,46 +54,59 @@
   height: auto;
   line-height: 1;
 }
-/* line 62, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 101, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.touch-carousel-inner > .item * {
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+/* line 106, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.touch-carousel-inner.animate {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+/* line 115, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-inner > .active,
 .touch-carousel-inner > .next,
 .touch-carousel-inner > .prev {
   display: block;
 }
-/* line 66, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 119, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-inner > .active {
   left: 0;
 }
-/* line 70, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 123, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-inner > .next,
 .touch-carousel-inner > .prev {
   position: absolute;
   top: 0;
   width: 100%;
 }
-/* line 77, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 130, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-inner > .next {
   left: 100%;
 }
-/* line 80, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 133, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-inner > .prev {
   left: -100%;
 }
-/* line 83, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 136, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-inner > .next.left,
 .touch-carousel-inner > .prev.right {
   left: 0;
 }
-/* line 88, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 141, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-inner > .active.left {
   left: -100%;
 }
-/* line 91, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 144, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-inner > .active.right {
   left: 100%;
 }
-/* line 100, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 153, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-control {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -86,12 +123,12 @@
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
-/* line 115, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 172, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-control.right {
   left: auto;
   right: 0;
 }
-/* line 121, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 178, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-control:hover,
 .touch-carousel-control:focus {
   color: #ffffff;
@@ -103,7 +140,7 @@
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
-/* line 129, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 186, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-control .icon-prev,
 .touch-carousel-control .icon-next,
 .touch-carousel-control .glyphicon-chevron-left,
@@ -113,17 +150,17 @@
   z-index: 5;
   display: inline-block;
 }
-/* line 138, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 195, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-control .icon-prev,
 .touch-carousel-control .glyphicon-chevron-left {
   left: 50%;
 }
-/* line 142, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 199, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-control .icon-next,
 .touch-carousel-control .glyphicon-chevron-right {
   right: 50%;
 }
-/* line 146, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 203, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-control .icon-prev,
 .touch-carousel-control .icon-next {
   width: 20px;
@@ -132,15 +169,15 @@
   margin-left: -10px;
   font-family: serif;
 }
-/* line 156, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 213, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-control .icon-prev:before {
   content: '\2039';
 }
-/* line 161, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 218, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-control .icon-next:before {
   content: '\203a';
 }
-/* line 172, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 229, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-indicators {
   position: absolute;
   bottom: 10px;
@@ -152,7 +189,7 @@
   list-style: none;
   text-align: center;
 }
-/* line 183, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 240, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-indicators li {
   display: inline-block;
   width: 10px;
@@ -163,14 +200,14 @@
   border-radius: 10px;
   cursor: pointer;
 }
-/* line 193, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 250, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-indicators .active {
   margin: 0;
   width: 12px;
   height: 12px;
   background-color: #ffffff;
 }
-/* line 204, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 261, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-caption {
   position: absolute;
   left: 15%;
@@ -183,12 +220,16 @@
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
-/* line 215, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+/* line 272, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
 .touch-carousel-caption .btn {
   text-shadow: none;
 }
+/* line 283, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.touch-carousel.non-touch .touch-carousel-control {
+  display: block;
+}
 @media screen and (min-width: 768px) {
-  /* line 226, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+  /* line 295, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
   .touch-carousel-control .glyphicons-chevron-left,
   .touch-carousel-control .glyphicons-chevron-right,
   .touch-carousel-control .icon-prev,
@@ -199,19 +240,19 @@
     margin-left: -15px;
     font-size: 30px;
   }
-  /* line 239, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+  /* line 308, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
   .touch-carousel-caption {
     left: 20%;
     right: 20%;
     padding-bottom: 30px;
   }
-  /* line 246, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+  /* line 315, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
   .touch-carousel-indicators {
     bottom: 20px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 256, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+  /* line 325, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
   .touch-carousel-caption {
     display: none;
   }

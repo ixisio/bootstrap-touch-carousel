@@ -1,6 +1,11 @@
+// Some useful Less Mixins https://github.com/dmitryf/elements
 @import "elements.less";
 
-// bootstrap variables
+
+//
+// (1) Bootstrap Parameters Overwrites & Mixins
+// --------------------------------------------------
+
 @carousel-indicator-border-color:             #fff;
 @carousel-indicator-active-bg:                #fff;
 @carousel-control-color:                      #fff;
@@ -13,7 +18,7 @@
 @screen-sm:                                   768px;
 @screen-sm-min:                               @screen-sm;
 
-// bootstrap mixins
+// fluid images
 .img-responsive(@display: block;) {
   display: @display;
   max-width: 100%; // Part 1: Set a maximum relative to the parent
@@ -32,32 +37,80 @@
 
 
 //
-// Carousel
+// (2) Mixins
 // --------------------------------------------------
 
-// Wrapper for the slide container and indicators
-.touch-carousel {
-  position: relative;
+.prevent-from-transition-flickr() {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
 }
 
-.touch-carousel-inner {
+.prevent-user-select() {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.resetTransition() {
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+
+
+
+
+//
+// (3) Carousel styles
+// --------------------------------------------------
+
+.touch-carousel {
   position: relative;
   overflow: hidden;
   width: 100%;
 
-  > .item {
-    display: none;
-    position: relative;
+  -webkit-transform: translate3d(0,0,0) scale3d(1,1,1);
+  .prevent-from-transition-flickr();
+  .prevent-user-select
+}
 
-    .transition(left, .6s, ease-in-out);
+.touch-carousel-inner {
+  overflow: hidden;
+  .transform( translate3d(0%,0,0) scale3d(1,1,1) );
+  .prevent-from-transition-flickr();
+  .prevent-user-select();
+
+  > .item {
+    position: relative;
+    float: left;
+    display: block;
+
+    .resetTransition();
+    .prevent-from-transition-flickr();
 
     // Account for jankitude on images
     > img,
-    > a > img {
+    > a > img, {
       .img-responsive();
       line-height: 1;
     }
+
+    * { .resetTransition(); }
   }
+
+
+
+  &.animate {
+    .transition(all, .3s, linear);
+  }
+
+
+
+
+
 
   > .active,
   > .next,
@@ -98,6 +151,10 @@
 // ---------------------------
 
 .touch-carousel-control {
+
+  // hidden per default (touch enabled devices)
+  display: none;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -216,6 +273,18 @@
     text-shadow: none; // No shadow for button elements in carousel-caption
   }
 }
+
+
+// non-touch fallback
+.touch-carousel.non-touch {
+
+  // @todo: default transitions
+
+  .touch-carousel-control {
+    display: block;
+  }
+}
+
 
 
 // Scale up controls for tablets and up
