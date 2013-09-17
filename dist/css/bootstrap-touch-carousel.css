@@ -1,0 +1,225 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/* line 39, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel {
+  position: relative;
+}
+/* line 43, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+/* line 48, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: left 0.6s ease-in-out;
+  -moz-transition: left 0.6s ease-in-out;
+  transition: left 0.6s ease-in-out;
+}
+/* line 55, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  line-height: 1;
+}
+/* line 62, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  display: block;
+}
+/* line 66, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-inner > .active {
+  left: 0;
+}
+/* line 70, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* line 77, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-inner > .next {
+  left: 100%;
+}
+/* line 80, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-inner > .prev {
+  left: -100%;
+}
+/* line 83, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+  left: 0;
+}
+/* line 88, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-inner > .active.left {
+  left: -100%;
+}
+/* line 91, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-inner > .active.right {
+  left: 100%;
+}
+/* line 100, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 15%;
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  -webkit-opacity: 0.5;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+/* line 115, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-control.right {
+  left: auto;
+  right: 0;
+}
+/* line 121, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-control:hover,
+.carousel-control:focus {
+  color: #ffffff;
+  text-decoration: none;
+  -moz-opacity: 0.9;
+  -khtml-opacity: 0.9;
+  -webkit-opacity: 0.9;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+/* line 129, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-control .icon-prev,
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+}
+/* line 138, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-control .icon-prev,
+.carousel-control .glyphicon-chevron-left {
+  left: 50%;
+}
+/* line 142, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-right {
+  right: 50%;
+}
+/* line 146, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  font-family: serif;
+}
+/* line 156, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-control .icon-prev:before {
+  content: '\2039';
+}
+/* line 161, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-control .icon-next:before {
+  content: '\203a';
+}
+/* line 172, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  margin-left: -30%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+/* line 183, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* line 193, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-indicators .active {
+  margin: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+}
+/* line 204, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-caption {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 20px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+/* line 215, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+.carousel-caption .btn {
+  text-shadow: none;
+}
+@media screen and (min-width: 768px) {
+  /* line 226, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+  .carousel-control .glyphicons-chevron-left,
+  .carousel-control .glyphicons-chevron-right,
+  .carousel-control .icon-prev,
+  .carousel-control .icon-next {
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -15px;
+    font-size: 30px;
+  }
+  /* line 239, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+  .carousel-caption {
+    left: 20%;
+    right: 20%;
+    padding-bottom: 30px;
+  }
+  /* line 246, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+  .carousel-indicators {
+    bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 256, /Users/andyk/Sites/Misc/_javascript/bootstrap-touch-carousel/src/less/carousel.less */
+  .carousel-caption {
+    display: none;
+  }
+}
+
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/

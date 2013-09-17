@@ -1,0 +1,33 @@
+; EditorConfig is awesome: http://EditorConfig.org
+
+root = true
+
+
+[*]
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Tabs in JS unless otherwise specified
+[**.js]
+indent_style = space
+indent_size = 2
+
+; Indentation override for all JS under lib directory
+[**/vendor/**.js]
+indent_style = space
+indent_size = 2
+
+[Makefile]
+indent_style = tab
+
+[**.xml]
+indent_style = tab
+
+[**.html]
+indent_style = tab
+
+[**.css]
+indent_style = space
+indent_size = 4

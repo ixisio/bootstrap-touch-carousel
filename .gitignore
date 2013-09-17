@@ -1,0 +1,19 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.zip
+*.vi
+*~
+
+# OS or Editor folders
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Folders to ignore
+node_modules
