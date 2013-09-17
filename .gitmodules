@@ -1,3 +1,6 @@
 [submodule "vendor/bootstrap"]
 	path = vendor/bootstrap
 	url = https://github.com/twbs/bootstrap.git
+[submodule "vendor/hammerjs"]
+	path = vendor/hammerjs
+	url = https://github.com/EightMedia/hammer.js.git
