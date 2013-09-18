@@ -1,13 +1,22 @@
 
 # Bootstrap TouchCarousel
 
-Use twitter bootstrap & hammer.js to create fully working touch-based image carousel.
+A drop-in replacement for Twitter Bootstrap's Carousel (v3.00) to enable gestures on touch-enabled devices.
+
+
+## Features
+
+* Supported gestures: `dragleft` `dragright` `swipeleft` `swiperight`
+* Build with Less & Grunt
+* No extra initializations
+
 
 ## Quick start
 
-1. [Download zip.](https://github.com/ixisio/bootstrap-touch-carousel/archive/master.zip)
-2. Clone the repo: git clone git://github.com/ixisio/bootstrap-touch-carousel.git.
-3. As a bootstrap git submodule.
+1. [Download zip](https://github.com/ixisio/bootstrap-touch-carousel/archive/master.zip)
+2. Clone the repo: `git clone git://github.com/ixisio/bootstrap-touch-carousel.git`
+3. As a Bootstrap git submodule `git submodule add git://github.com/ixisio/bootstrap-touch-carousel.git /vendor/bootstrap-touch-carousel`
+
 
 ## How it works
 
@@ -18,11 +27,18 @@ This jQuery Plugin is designed to add touch-support to your existing bootstrap c
 /dist/css/bootstrap-touch-carousel.css
 ```
 
+
+## Live Demo
+
+`examples/index.html`
+
+
 ## Compiling CSS and JavaScript
 
 > Bootstrap uses [Grunt](http://gruntjs.com/) with convenient methods for working with the framework. It's how we compile our code, run tests, and more. To use it, install the required dependencies as directed and then run some Grunt commands.
 
 [See twbs docs](https://github.com/twbs/bootstrap/blob/master/README.md)
+
 
 ## Future Tasks
 
@@ -30,9 +46,11 @@ This jQuery Plugin is designed to add touch-support to your existing bootstrap c
 * Live Resize
 * Hammer.js custom build (use only whats required)
 * MSPointer: Support pointer and gesture events. Tests needed!
+* Optimize indicator pills for touch
 * Better Documentation
 * Unit Tests (qunit)
 * Without-Hammerjs Version
+
 
 ## Copyright and license
 
