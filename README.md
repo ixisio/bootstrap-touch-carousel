@@ -15,7 +15,7 @@ A drop-in replacement for Twitter Bootstrap's Carousel (v3.00) to enable gesture
 
 1. [Download zip](https://github.com/ixisio/bootstrap-touch-carousel/archive/master.zip)
 2. Clone the repo: `git clone git://github.com/ixisio/bootstrap-touch-carousel.git`
-3. As a Bootstrap git submodule `git submodule add git://github.com/ixisio/bootstrap-touch-carousel.git /vendor/bootstrap-touch-carousel`
+3. As a Bootstrap git submodule `git submodule add git://github.com/ixisio/bootstrap-touch-carousel.git /vendor/your-sm`
 
 
 ## How it works
