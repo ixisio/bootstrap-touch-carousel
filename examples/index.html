@@ -11,12 +11,87 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="../vendor/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../dist/css/bootstrap-touch-carousel.css">
+
+	<style>
+		.bs-footer {
+		  padding-top: 40px;
+		  padding-bottom: 30px;
+		  margin-top: 100px;
+		  color: #777;
+		  text-align: center;
+		  border-top: 1px solid #e5e5e5;
+		}
+		.footer-links {
+		  margin: 10px 0;
+		  padding-left: 0;
+		}
+		.footer-links li {
+		  display: inline;
+		  padding: 0 2px;
+		}
+		.footer-links li:first-child {
+		  padding-left: 0;
+		}
+
+		@media (min-width: 768px) {
+		  .bs-footer {
+		    text-align: left;
+		  }
+		  .bs-footer p {
+		    margin-bottom: 0;
+		  }
+		}
+
+
+		/*
+		 * Social buttons
+		 *
+		 * Twitter and GitHub social action buttons (for homepage and footer).
+		 */
+
+		.bs-social {
+		  margin-top: 20px;
+		  margin-bottom: 20px;
+		  text-align: center;
+		}
+		.bs-social-buttons {
+		  display: inline-block;
+		  margin-bottom: 0;
+		  padding-left: 0;
+		  list-style: none;
+		}
+		.bs-social-buttons li {
+		  display: inline-block;
+		  line-height: 1;
+		  padding: 5px 8px;
+		}
+		.bs-social-buttons .twitter-follow-button {
+		  width: 225px !important;
+		}
+		.bs-social-buttons .twitter-share-button {
+		  width: 98px !important;
+		}
+		/* Style the GitHub buttons via CSS instead of inline attributes */
+		.github-btn {
+		  border: 0;
+		  overflow: hidden;
+		}
+
+		@media screen and (min-width: 768px) {
+		  .bs-social {
+		    text-align: left;
+		  }
+		  .bs-social-buttons li:first-child {
+		    padding-left: 0;
+		  }
+		}
+
+	</style>
+
   </head>
 <!-- NAVBAR
 ================================================== -->
   <body>
-
-
 	<div class="jumbotron">
 		<div class="container">
 			<h1>Feel's good!</h1>
@@ -55,7 +130,7 @@
 							<div class="container">
 								<div class="carousel-caption">
 									<h1>Another example headline.</h1>
-									<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta 		gravida 	at eget metus. 					Nullam id dolor id nibh ultricies vehicula ut 	id elit.<	/p>
+									<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta 		gravida 	at eget metus. 					Nullam id dolor id nibh ultricies vehicula ut 	id elit.</p>
 									<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
 								</div>
 							</div>
@@ -77,8 +152,35 @@
 
 	    	</div>
 	    </div>
-
     </div><!-- /.container -->
+
+
+    <footer class="bs-footer" role="contentinfo">
+	      <div class="container">
+	        <div class="bs-social">
+			  <ul class="bs-social-buttons">
+
+			    <li>
+			      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=ixisio&amp;repo=bootstrap-touch-carousel&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub"></iframe>
+			    </li>
+
+			    <li class="follow-btn">
+			      	<a href="https://twitter.com/ixisio" class="twitter-follow-button" data-show-count="true">Follow @ixisio</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			    </li>
+			    <li class="tweet-btn">
+			      	<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://github.com/ixisio/bootstrap-touch-carousel" data-text="Bootstrap TouchCarousel for Gesture Support">Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			    </li>
+			  </ul>
+			</div>
+
+
+	        <p>Copyright (c) 2013 <a href="http://twitter.com/ixisio">ixisio</a> Licensed under the <a href="https://github.com/ixisio/bootstrap-touch-carousel/blob/master/LICENSE-MIT">MIT license</a>.</p>
+
+	      </div>
+    </footer>
+
 
 
     <!-- Bootstrap core JavaScript

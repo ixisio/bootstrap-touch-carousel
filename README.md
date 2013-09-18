@@ -20,17 +20,12 @@ A drop-in replacement for Twitter Bootstrap's Carousel (v3.00) to enable gesture
 
 ## How it works
 
-This jQuery Plugin is designed to add touch-support to your existing bootstrap carousel. The only thing you have to do, is to load these to files:
+This jQuery Plugin is designed to add touch-support to your existing bootstrap carousel. The only thing you have to do, is to load these files into yout existing Bootstrap project:
 
 ```
 /dist/js/bootstrap-touch-carousel.js
 /dist/css/bootstrap-touch-carousel.css
 ```
-
-
-## Live Demo
-
-`examples/index.html`
 
 
 ## Compiling CSS and JavaScript
