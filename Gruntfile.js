@@ -8,15 +8,36 @@ module.exports = function(grunt) {
 
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
-    banner: '/*!\n' +
-              '* <%= pkg.name %> v<%= pkg.version %>\n' +
-              '* (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-              '* Licensed under <%= pkg.licenses.type %>\n' +
-              '*/\n',
+    banner: '/*! \n' +
+            ' * <%= pkg.name %> v<%= pkg.version %>\n' +
+            ' * <%= pkg.repository.url %> \n' +
+            ' * \n' +
+            ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+            ' * Licensed under the <%= pkg.licenses[0].type %> license\n' +
+            ' * \n' +
+            ' * \n' +
+            ' * Including Hammer.js@1.0.6dev, http://eightmedia.github.com/hammer.js \n' +
+            ' */ \n',
+
+    /*
+     * grunt-requirejs
+     * https://github.com/asciidisco/grunt-requirejs
+     *
+     * Copyright (c) 2012 Sebastian Golasch, contributors
+     * Licensed under the MIT license.
+     */
+
+    functionalScope: {
+      header: '+function ($) {\n' +
+              '  "use strict";\n' +
+              '\n' +
+              '  if (!("ontouchstart" in window || navigator.msMaxTouchPoints)) return false \n\n',
+      footer: '}(window.jQuery);'
+    },
 
     jshint: {
       options: {
-        jshintrc: 'src/js/.jshintrc'
+        jshintrc: '.jshintrc'
       },
       gruntfile: {
         src: 'Gruntfile.js'
@@ -30,6 +51,11 @@ module.exports = function(grunt) {
     },
 
     concat: {
+      options: {
+        banner: '<%= functionalScope.header %>',
+        footer: '<%= functionalScope.footer %>',
+        stripBanners: false
+      },
       js: {
         src: [
           'src/js/transition.js',
@@ -44,8 +70,8 @@ module.exports = function(grunt) {
         banner: '<%= banner %>'
       },
       js: {
-        src: ['<%= concat.js.dest %>'],
-        dest: 'dist/js/<%= pkg.name %>.min.js'
+        src: ['<%= concat.js.dest %>', 'vendor/hammerjs/dist/jquery.hammer.js',],
+        dest: 'dist/js/<%= pkg.name %>.js'
       }
     },
 
@@ -69,9 +95,20 @@ module.exports = function(grunt) {
       }
     },
 
+    cssmin: {
+      prod: {
+        options: {
+          banner: '/* <%= pkg.name %> v<%= pkg.version %>, (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %> */'
+        },
+        files: {
+          '<%= less.prod.dest %>' : '<%= less.prod.dest %>'
+        }
+      }
+    },
+
     qunit: {
       options: {
-        inject: 'scr/js/tests/unit/phantom.js'
+        inject: 'src/js/tests/unit/phantom.js'
       },
       files: ['src/js/tests/*.html']
     },
@@ -83,7 +120,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: 'src/js/*.js',
-        tasks: ['jshint', 'concat']
+        tasks: ['jshint', 'concat', 'uglify']
       }
     }
   });
@@ -96,8 +133,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('build', ['jshint', 'less:prod', 'concat', 'uglify']);
+  grunt.registerTask('build', ['jshint', 'concat', 'uglify', 'less:prod', 'cssmin']);
 };
