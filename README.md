@@ -16,7 +16,6 @@ This jQuery Plugin is designed to add touch-support to your existing bootstrap c
 ```
 /dist/js/bootstrap-touch-carousel.js
 /dist/css/bootstrap-touch-carousel.css
-
 ```
 
 ## Compiling CSS and JavaScript

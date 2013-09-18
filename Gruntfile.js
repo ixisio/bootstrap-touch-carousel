@@ -19,14 +19,6 @@ module.exports = function(grunt) {
             ' * Including Hammer.js@1.0.6dev, http://eightmedia.github.com/hammer.js \n' +
             ' */ \n',
 
-    /*
-     * grunt-requirejs
-     * https://github.com/asciidisco/grunt-requirejs
-     *
-     * Copyright (c) 2012 Sebastian Golasch, contributors
-     * Licensed under the MIT license.
-     */
-
     functionalScope: {
       header: '+function ($) {\n' +
               '  "use strict";\n' +
@@ -134,7 +126,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-
 
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('build', ['jshint', 'concat', 'uglify', 'less:prod', 'cssmin']);
