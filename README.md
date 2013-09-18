@@ -27,6 +27,7 @@ This jQuery Plugin is designed to add touch-support to your existing bootstrap c
 ## Future Tasks
 
 * Endless Loops (cycle)
+* Live Resize
 * Hammer.js custom build (use only whats required)
 * MSPointer: Support pointer and gesture events. Tests needed!
 * Better Documentation
