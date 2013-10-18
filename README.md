@@ -1,6 +1,7 @@
 # Bootstrap TouchCarousel
 
 A drop-in replacement for Twitter Bootstrap's Carousel (v3.00) to enable gestures on touch-enabled devices.
+[http://v7.andreasklein.org/articles/bootstrap-touch](http://v7.andreasklein.org/articles/bootstrap-touch)
 
 
 ## Features
