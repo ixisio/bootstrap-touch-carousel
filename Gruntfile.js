@@ -127,6 +127,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
+  grunt.registerTask('test', ['jshint', 'qunit']);
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('build', ['jshint', 'concat', 'uglify', 'less:prod', 'cssmin']);
 };
