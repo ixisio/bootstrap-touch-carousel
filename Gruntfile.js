@@ -51,7 +51,7 @@ module.exports = function(grunt) {
       js: {
         src: [
           'src/js/transition.js',
-          'src/js/carousel.js',
+          'src/js/touch-carousel.js',
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
         options: {
           compile: true,
           banner: '<%= banner %>',
-          compress: true
+          compress: false
         },
         src: ['src/less/*.less'],
         dest: 'dist/css/<%= pkg.name %>.css'
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
           banner: '/* <%= pkg.name %> v<%= pkg.version %>, (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %> */'
         },
         files: {
-          '<%= less.prod.dest %>' : '<%= less.prod.dest %>'
+          'dist/css/<%= pkg.name %>.css': '<%= less.prod.dest %>'
         }
       }
     },
@@ -127,7 +127,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask('test', ['jshint', 'qunit']);
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask('test', ['jshint', 'qunit']);
   grunt.registerTask('build', ['jshint', 'concat', 'uglify', 'less:prod', 'cssmin']);
 };
