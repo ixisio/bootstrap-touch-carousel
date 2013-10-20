@@ -70,7 +70,7 @@ This jQuery Plugin is designed to add touch-support to your existing bootstrap c
 * Hammer.js custom build (use only whats required)
 * ~~MSPointer: Support pointer and gesture events. Tests needed!~~
     Works perfectly! See hammer.js [compatibility table](https://github.com/EightMedia/hammer.js/wiki/Compatibility)
-* ~~Optimize indicator pills for touch~ done! [#3](https://github.com/ixisio/bootstrap-touch-carousel/issues/3)
+* ~~Optimize indicator pills for touch~~ done! [#3](https://github.com/ixisio/bootstrap-touch-carousel/issues/3)
 * Better Documentation
 * Unit Tests (qunit)
 
