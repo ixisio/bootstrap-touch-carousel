@@ -54,8 +54,8 @@ This jQuery Plugin is designed to add touch-support to your existing bootstrap c
 
 **0.2.0**
 * MSPointer benchmarks
-* fixes #3, touch optimizes indicator pills
-* #2, display captions on portait orientation iPad
+* fixes [#3](https://github.com/ixisio/bootstrap-touch-carousel/issues/3), touch optimizes indicator pills
+* [#2](https://github.com/ixisio/bootstrap-touch-carousel/issues/2), display captions on portait orientation iPad
 * Create some unittest with qunit
 * Documentation
 
@@ -68,9 +68,9 @@ This jQuery Plugin is designed to add touch-support to your existing bootstrap c
 * Endless Loops (cycle)
 * Live Resize
 * Hammer.js custom build (use only whats required)
-* <s>MSPointer: Support pointer and gesture events. Tests needed!</s>
+* ~~MSPointer: Support pointer and gesture events. Tests needed!~~
     Works perfectly! See hammer.js [compatibility table](https://github.com/EightMedia/hammer.js/wiki/Compatibility)
-* <s>Optimize indicator pills for touch</s> done! #3
+* ~~Optimize indicator pills for touch~~ done! #3
 * Better Documentation
 * Unit Tests (qunit)
 
