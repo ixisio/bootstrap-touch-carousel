@@ -52,6 +52,10 @@ This jQuery Plugin is designed to add touch-support to your existing bootstrap c
 
 ## Changelog
 
+**0.3.0**
+
+* Update to grunt@0.4.2
+
 **0.2.0**
 * MSPointer benchmarks
 * fixes [#3](https://github.com/ixisio/bootstrap-touch-carousel/issues/3), touch optimizes indicator pills
