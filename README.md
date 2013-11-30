@@ -31,7 +31,7 @@ In case you are using a desktop to test this plugin you will need to emulate tou
 
 ### Plugin Options
 
-Have a look at the original bootstrap carousel documentation, , the options are mostly the same. <br>
+Have a look at the original bootstrap carousel documentation, the options are mostly the same. <br>
 [http://getbootstrap.com/javascript/#carousel](http://getbootstrap.com/javascript/#carousel)
 
 
@@ -106,6 +106,7 @@ This jQuery Plugin is designed to add touch-support to your existing bootstrap c
 * ~~Optimize indicator pills for touch~~ done! [#3](https://github.com/ixisio/bootstrap-touch-carousel/issues/3)
 * Better Documentation
 * Unit Tests (qunit)
+* Register as [bower](http://bower.io) component
 
 
 ## Copyright and license
