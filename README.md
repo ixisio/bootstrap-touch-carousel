@@ -1,7 +1,7 @@
 # Bootstrap TouchCarousel
 
-A drop-in replacement for Twitter Bootstrap's Carousel (v3.00) to enable gestures on touch-enabled devices.
-[http://v7.andreasklein.org/articles/bootstrap-touch](http://v7.andreasklein.org/articles/bootstrap-touch)
+A drop-in replacement for Twitter Bootstrap's Carousel (v3.0) to enable gestures on touch-enabled devices.
+[http://andreasklein.org/articles/bootstrap-touch](http://andreasklein.org/articles/bootstrap-touch)
 
 
 ## Features
@@ -29,6 +29,31 @@ In case you are using a desktop to test this plugin you will need to emulate tou
 * Check "*Enable*" Overwrites and scroll down and check "*Enable touch events*"
 * Refresh the Page
 
+### Plugin Options
+
+Have a look at the original bootstrap carousel documentation, , the options are mostly the same. <br>
+[http://getbootstrap.com/javascript/#carousel](http://getbootstrap.com/javascript/#carousel)
+
+
+#### interval
+
+Type: `Number` `Boolean`
+Default `false`
+
+The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.
+
+`data-interval="2000"`
+
+#### toughness
+
+Type: `Number`
+Default `0.25`
+
+Dragging toughness of first and last carousel item.
+
+`data-toughness="0.5"`
+
+
 
 ## How it works
 
@@ -52,8 +77,12 @@ This jQuery Plugin is designed to add touch-support to your existing bootstrap c
 
 ## Changelog
 
-**0.3.0**
+**0.5.0**
+* add resize/orientation events and resize the carousel to its parent element width [#5](https://github.com/ixisio/bootstrap-touch-carousel/issues/5)
+* Some minor bugfixes
+* update docs
 
+**0.3.0**
 * Update to grunt@0.4.2
 
 **0.2.0**
@@ -69,8 +98,8 @@ This jQuery Plugin is designed to add touch-support to your existing bootstrap c
 
 ## Feature Requests / Future Tasks
 
-* Endless Loops (cycle)
-* Live Resize
+* Endless Loops (wrap)
+* ~~Live Resize~~ fixed in v0.5.0 [#5](https://github.com/ixisio/bootstrap-touch-carousel/issues/5)
 * Hammer.js custom build (use only whats required)
 * ~~MSPointer: Support pointer and gesture events. Tests needed!~~
     Works perfectly! See hammer.js [compatibility table](https://github.com/EightMedia/hammer.js/wiki/Compatibility)

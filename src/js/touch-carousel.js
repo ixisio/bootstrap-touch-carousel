@@ -1,11 +1,13 @@
 
+  // CONST
+  var NAMESPACE = 'touch-carousel'
+
   // TouchCarousel Constructor
   // -------------------
   var TouchCarousel = function (element, options) {
     this.$element       = $(element)
-    this.$itemsWrapper  = $(element).find('.carousel-inner')
+    this.$itemsWrapper  = this.$element.find('.carousel-inner')
     this.$items         = this.$element.find('.item')
-    this.$controls      = this.$element.find('.carousel-control')
     this.$indicators    = this.$element.find('.carousel-indicators')
     this.pane_width     =
     this.pane_count     =
@@ -13,18 +15,15 @@
     this.onGesture      = false
     this.options        = options
 
-    $(element).addClass(this.options.namespace)
-
     this._setPaneDimensions()
     this._regTouchGestures()
+
+    $(window).on('orientationchange resize', $.proxy(this._setPaneDimensions, this) );
   }
 
   TouchCarousel.DEFAULTS = {
-    namespace: 'touch-carousel',
-    interval: 5000,
-    cycle: true,
-    toughness: 0.25,
-    isTouch: 'createTouch' in document
+    interval: false,
+    toughness: 0.25
   }
 
   // TouchCarousel Prototype methods
@@ -41,7 +40,7 @@
 
   TouchCarousel.prototype.to = function (pos) {
     if (pos > (this.$items.length - 1) || pos < 0) return
-    return this._showPane( pos, true);
+    return this._showPane( pos );
   }
 
   TouchCarousel.prototype.pause = function (e) {
@@ -65,11 +64,6 @@
     // Set items & wrapper to fixed width
     this.$itemsWrapper.width( this.pane_width * this.pane_count );
     this.$items.width( this.pane_width );
-
-    // trigger _showPane for re-position the current pane
-    // after re-calculation of pane width.
-    this._showPane( this.current_pane );
-
   }
 
   TouchCarousel.prototype._showPane= function( index ) {
@@ -134,11 +128,11 @@
   }
 
   TouchCarousel.prototype.next = function() {
-    return this._showPane( this.current_pane+1, true);
+    return this._showPane( this.current_pane+1 );
   }
 
   TouchCarousel.prototype.prev = function() {
-    return this._showPane( this.current_pane-1, true);
+    return this._showPane( this.current_pane-1 );
   }
 
   TouchCarousel.prototype._handleGestures = function( e ) {
@@ -186,7 +180,7 @@
             }
         }
         else {
-            this._showPane(this.current_pane, true);
+            this._showPane( this.current_pane, true );
         }
         break;
     }
@@ -201,7 +195,6 @@
     return this;
   }
 
-
   // CAROUSEL PLUGIN DEFINITION
   // ==========================
 
@@ -211,11 +204,11 @@
   $.fn.carousel = function (option) {
     return this.each(function () {
       var $this   = $(this)
-      var data    = $this.data( TouchCarousel.DEFAULTS.namespace )
+      var data    = $this.data( NAMESPACE )
       var options = $.extend({}, TouchCarousel.DEFAULTS, $this.data(), typeof option == 'object' && option)
       var action  = typeof option == 'string' ? option : options.slide
 
-      if (!data) $this.data( TouchCarousel.DEFAULTS.namespace, (data = new TouchCarousel(this, options)))
+      if (!data) $this.data( NAMESPACE, (data = new TouchCarousel(this, options))).addClass(NAMESPACE)
       if (typeof option == 'number') data.to(option)
       else if (action) data[action]()
       else if (options.interval) data.pause().cycle()
@@ -248,15 +241,8 @@
     $target.carousel(options)
 
     if (slideIndex = $this.attr('data-slide-to')) {
-      $target.data( TouchCarousel.DEFAULTS.namespace ).to(slideIndex)
+      $target.data( NAMESPACE ).to(slideIndex)
     }
 
     e.preventDefault()
-  })
-
-  $(window).on('load', function () {
-    $('[data-ride="carousel"]').each(function () {
-      var $carousel = $(this)
-      $carousel.carousel($carousel.data())
-    })
   })

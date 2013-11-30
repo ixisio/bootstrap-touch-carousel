@@ -59,7 +59,8 @@ module.exports = function(grunt) {
 
     uglify: {
       options: {
-        banner: '<%= banner %>'
+        banner: '<%= banner %>',
+        report: 'min'
       },
       js: {
         src: ['<%= concat.js.dest %>', 'vendor/hammerjs/dist/jquery.hammer.js',],
@@ -90,7 +91,8 @@ module.exports = function(grunt) {
     cssmin: {
       prod: {
         options: {
-          banner: '/* <%= pkg.name %> v<%= pkg.version %>, (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %> */'
+          banner: '/* <%= pkg.name %> v<%= pkg.version %>, (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %> */',
+          report: 'min'
         },
         files: {
           'dist/css/<%= pkg.name %>.css': '<%= less.prod.dest %>'
