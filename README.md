@@ -37,8 +37,8 @@ Have a look at the original bootstrap carousel documentation, the options are mo
 
 #### interval
 
-Type: `Number` `Boolean`
-Default `false`
+* Type: `Number` `Boolean`
+* Default `false`
 
 The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.
 
@@ -46,8 +46,8 @@ The amount of time to delay between automatically cycling an item. If false, car
 
 #### toughness
 
-Type: `Number`
-Default `0.25`
+* Type: `Number`
+* Default `0.25`
 
 Dragging toughness of first and last carousel item.
 
@@ -59,8 +59,8 @@ Dragging toughness of first and last carousel item.
 
 This jQuery Plugin is designed to add touch-support to your existing bootstrap carousel. The only thing you have to do, is to load these files into your existing Bootstrap project:
 
-`/dist/js/bootstrap-touch-carousel.js`
-`/dist/css/bootstrap-touch-carousel.css`
+* `/dist/js/bootstrap-touch-carousel.js`
+* `/dist/css/bootstrap-touch-carousel.css`
 
 
 ## Compiling CSS and JavaScript
