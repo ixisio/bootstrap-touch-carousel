@@ -98,6 +98,7 @@ This jQuery Plugin is designed to add touch-support to your existing bootstrap c
 
 ## Feature Requests / Future Tasks
 
+* Disable / Stop initialization if there is only one item [#6](https://github.com/ixisio/bootstrap-touch-carousel/issues/6)
 * Endless Loops (wrap)
 * ~~Live Resize~~ fixed in v0.5.0 [#5](https://github.com/ixisio/bootstrap-touch-carousel/issues/5)
 * Hammer.js custom build (use only whats required)
