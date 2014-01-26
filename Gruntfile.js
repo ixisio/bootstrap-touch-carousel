@@ -116,6 +116,11 @@ module.exports = function(grunt) {
         files: 'src/js/*.js',
         tasks: ['jshint', 'concat', 'uglify']
       }
+    },
+    bump: {
+      options: {
+        commitFiles: ['-a']
+      }
     }
   });
 
@@ -128,6 +133,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-bump');
 
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('test', ['jshint', 'qunit']);

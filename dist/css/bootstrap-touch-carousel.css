@@ -1,2 +1,81 @@
-/* bootstrap-touch-carousel v0.5.0, (c) 2013 (ixisio) Andreas Klein */
-.touch-carousel{position:relative;overflow:hidden;width:100%;-webkit-transform:translate3d(0,0,0) scale3d(1,1,1);-webkit-backface-visibility:hidden;-webkit-transform-style:preserve-3d;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.touch-carousel .carousel-control{display:none!important}.touch-carousel .carousel-indicators{bottom:10px}.touch-carousel .carousel-indicators li{width:16px;height:16px;margin:1px 5px}.touch-carousel .carousel-indicators li.active{margin:0 5px;width:18px;height:18px}.touch-carousel .carousel-inner{overflow:hidden;-webkit-transform:translate3d(0%,0,0) scale3d(1,1,1);-moz-transform:translate3d(0%,0,0) scale3d(1,1,1);-ms-transform:translate3d(0%,0,0) scale3d(1,1,1);transform:translate3d(0%,0,0) scale3d(1,1,1);-webkit-backface-visibility:hidden;-webkit-transform-style:preserve-3d;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.touch-carousel .carousel-inner>.item{position:relative;float:left;display:block;-webkit-transition:none;-moz-transition:none;transition:none;-webkit-backface-visibility:hidden;-webkit-transform-style:preserve-3d}.touch-carousel .carousel-inner>.item *{-webkit-transition:none;-moz-transition:none;transition:none}.touch-carousel .carousel-inner.animate{-webkit-transition:all .3s linear;-moz-transition:all .3s linear;transition:all .3s linear}@media screen and (max-width:767px){.carousel-caption{display:none}}
+/* line 34, /Users/andyk/Sites/open-source/bootstrap-touch-carousel/src/less/carousel.less */
+.touch-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 43, /Users/andyk/Sites/open-source/bootstrap-touch-carousel/src/less/carousel.less */
+.touch-carousel .carousel-control {
+  display: none !important;
+}
+/* line 48, /Users/andyk/Sites/open-source/bootstrap-touch-carousel/src/less/carousel.less */
+.touch-carousel .carousel-indicators {
+  bottom: 10px;
+}
+/* line 52, /Users/andyk/Sites/open-source/bootstrap-touch-carousel/src/less/carousel.less */
+.touch-carousel .carousel-indicators li {
+  width: 16px;
+  height: 16px;
+  margin: 1px 5px;
+}
+/* line 56, /Users/andyk/Sites/open-source/bootstrap-touch-carousel/src/less/carousel.less */
+.touch-carousel .carousel-indicators li.active {
+  margin: 0px 5px;
+  width: 18px;
+  height: 18px;
+}
+/* line 65, /Users/andyk/Sites/open-source/bootstrap-touch-carousel/src/less/carousel.less */
+.touch-carousel .carousel-inner {
+  overflow: hidden;
+  -webkit-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+  -moz-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+  -ms-transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+  transform: translate3d(0%, 0, 0) scale3d(1, 1, 1);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 71, /Users/andyk/Sites/open-source/bootstrap-touch-carousel/src/less/carousel.less */
+.touch-carousel .carousel-inner > .item {
+  position: relative;
+  float: left;
+  display: block;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+}
+/* line 79, /Users/andyk/Sites/open-source/bootstrap-touch-carousel/src/less/carousel.less */
+.touch-carousel .carousel-inner > .item * {
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+/* line 82, /Users/andyk/Sites/open-source/bootstrap-touch-carousel/src/less/carousel.less */
+.touch-carousel .carousel-inner.animate {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+@media screen and (max-width: 767px) {
+  /* line 92, /Users/andyk/Sites/open-source/bootstrap-touch-carousel/src/less/carousel.less */
+  .carousel-caption {
+    display: none;
+  }
+}
+
