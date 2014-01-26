@@ -16,6 +16,10 @@
     this.options        = options
 
     this._setPaneDimensions()
+    // disable carousel if there is only one
+    // or no item. (fixes # 6)
+    if (this.$items.length <= 1) return this.disable()
+
     this._regTouchGestures()
 
     $(window).on('orientationchange resize', $.proxy(this._setPaneDimensions, this) );
@@ -185,6 +189,13 @@
         }
         break;
     }
+  }
+
+  TouchCarousel.prototype.disable = function() {
+    this.$indicators.hide()
+    this.$element.removeData( NAMESPACE );
+
+    return false;
   }
 
   TouchCarousel.prototype._updateIndicators = function(index) {

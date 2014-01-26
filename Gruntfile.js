@@ -119,7 +119,8 @@ module.exports = function(grunt) {
     },
     bump: {
       options: {
-        commitFiles: ['-a']
+        commitFiles: ['-a'],
+        pushTo: 'git@github.com:ixisio/bootstrap-touch-carousel.git'
       }
     }
   });

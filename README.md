@@ -74,8 +74,17 @@ This jQuery Plugin is designed to add touch-support to your existing bootstrap c
 * `grunt` Default tasks watches for JavaScript & LESS Changes
 * `grunt build` creates a distribution build
 * `grunt test` provides some qunit tests
+* `grunt bump` release management
 
 ## Changelog
+
+**0.7.0**
+* Disable when with only 1 slide [#6](https://github.com/ixisio/bootstrap-touch-carousel/issues/6)
+* Add new Grunt Task `grunt-bump` for release management. [vojtajina/grunt-bump](https://github.com/vojtajina/grunt-bump)
+
+**0.6.0**
+* fixes indicators touch sensitivity [#9](https://github.com/ixisio/bootstrap-touch-carousel/issues/9)
+* code refactoring
 
 **0.5.0**
 * add resize/orientation events and resize the carousel to its parent element width [#5](https://github.com/ixisio/bootstrap-touch-carousel/issues/5)
