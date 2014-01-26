@@ -1,10 +1,10 @@
 
   // CONST
-  var NAMESPACE = 'touch-carousel'
+  var NAMESPACE = 'touch-carousel',
 
   // TouchCarousel Constructor
   // -------------------
-  var TouchCarousel = function (element, options) {
+  TouchCarousel = function (element, options) {
     this.$element       = $(element)
     this.$itemsWrapper  = this.$element.find('.carousel-inner')
     this.$items         = this.$element.find('.item')
@@ -53,6 +53,7 @@
 
   TouchCarousel.prototype._regTouchGestures = function() {
     this.$itemsWrapper
+      .add(this.$indicators) // fixes issue #9
       .hammer({ drag_lock_to_axis: true })
       .on("release dragleft dragright swipeleft swiperight", $.proxy(this._handleGestures, this));
   }
