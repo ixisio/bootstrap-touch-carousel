@@ -124,4 +124,4 @@ This jQuery Plugin is designed to add touch-support to your existing bootstrap c
 
 ## Copyright and license
 
-Copyright (c) 2013 ixisio Licensed under the MIT license.
+Copyright (c) 2014 ixisio Licensed under the MIT license.
