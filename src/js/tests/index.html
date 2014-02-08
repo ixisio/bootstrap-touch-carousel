@@ -1,22 +1,22 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Bootstrap Plugin Test Suite</title>
+  <title>Bootstrap Touch Carousel Plugin Test Suite</title>
 
   <!-- jquery -->
-  <!--<script src="http://code.jquery.com/jquery-1.7.min.js"></script>-->
   <script src="vendor/jquery.js"></script>
 
   <!-- qunit -->
   <link rel="stylesheet" href="vendor/qunit.css" type="text/css" media="screen" />
   <script src="vendor/qunit.js"></script>
 
+	<!-- Runs only in PhantomJS with Connect Webserver -->
+
   <!--  plugin sources -->
   <script src="vendor/jquery.hammer.min.js"></script>
-  <script src="../../js/transition.js"></script>
+  <script src="js/transition.js"></script>
   <script src="vendor/default-carousel.js"></script>
-  <script src="../../js/touch-carousel.js"></script>
-
+  <script src="js/bootstrap-touch-carousel.js"></script>
 
   <!-- unit tests -->
   <script src="unit/transition.js"></script>
@@ -25,10 +25,7 @@
 </head>
 <body>
   <div>
-    <h1 id="qunit-header">Bootstrap TouchCarousel Plugin Test Suite</h1>
-    <h2 id="qunit-banner"></h2>
-    <h2 id="qunit-userAgent"></h2>
-    <ol id="qunit-tests"></ol>
+    <div id="qunit"></div>
     <div id="qunit-fixture"></div>
   </div>
 </body>

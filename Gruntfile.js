@@ -1,5 +1,9 @@
 /* jshint node: true */
 
+function mountFolder (connect, dir) {
+  return connect.static(require('path').resolve(dir));
+}
+
 module.exports = function(grunt) {
   "use strict";
 
@@ -101,10 +105,36 @@ module.exports = function(grunt) {
     },
 
     qunit: {
+      //options: {
+      //  inject: 'src/js/tests/unit/phantom.js'
+      //},
       options: {
-        inject: 'src/js/tests/unit/phantom.js'
+        //'phantomPath': 'node_modules/phantomjs/lib/phantom/phantomjs.exe',
+        '--local-to-remote-url-access': 'no',
+        '--proxy': '127.0.01',
+        timeout: 5000,
+        console: true
       },
-      files: ['src/js/tests/*.html']
+      test: {
+        options: {
+            urls: ['http://127.0.0.1:<%= connect.test.options.port %>/index.html']
+        }
+      }
+      //files: ['src/js/tests/index.html']
+    },
+    connect: {
+      test: {
+        options: {
+          port: 9002,
+          hostname: '127.0.0.1',
+          middleware: function (connect) {
+            return [
+              mountFolder(connect, 'dist'),
+              mountFolder(connect, 'src/js/tests'),
+            ];
+          }
+        }
+      }
     },
 
     watch: {
@@ -133,10 +163,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-bump');
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('test', ['jshint', 'qunit']);
-  grunt.registerTask('build', ['jshint', 'concat', 'uglify', 'less:prod', 'cssmin']);
+  grunt.registerTask('test', ['jshint', 'connect:test', 'qunit:test']);
+  grunt.registerTask('build', ['jshint', 'test', 'concat', 'uglify', 'less:prod', 'cssmin']);
 };
