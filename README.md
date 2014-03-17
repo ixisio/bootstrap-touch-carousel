@@ -3,7 +3,6 @@
 A drop-in replacement for Twitter Bootstrap's Carousel (v3.0) to enable gestures on touch-enabled devices.
 
 **DEMO:** [ixisio.github.io/bootstrap-touch-carousel](http://ixisio.github.io/bootstrap-touch-carousel/)
-
 **Article:** [andreasklein.org/articles/bootstrap-touch](http://andreasklein.org/articles/bootstrap-touch)
 
 
@@ -14,6 +13,10 @@ A drop-in replacement for Twitter Bootstrap's Carousel (v3.0) to enable gestures
 * Build with Less & Grunt
 * No extra initializations
 
+## The TouchCarousel in Action
+
+* [Aktion-Mensch.de Magazin](https://www.aktion-mensch.de/magazin/fokus/boxer.html)
+* *(Ping me, or send a PR if you too are using the TouchCarousel in the wild.)*
 
 ## Quick start
 Three quick start options are available:
