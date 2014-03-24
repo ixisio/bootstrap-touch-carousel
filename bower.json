@@ -1,0 +1,25 @@
+{
+  "name": "bootstrap-touch-carousel",
+  "version": "0.7.0",
+  "homepage": "https://github.com/ixisio/bootstrap-touch-carousel",
+  "authors": [
+    "Andreas Klein"
+  ],
+  "description": "A drop-in replacement for Twitter Bootstrap's Carousel (v3.00) to enable gestures on touch-enabled devices.",
+  "main": ["dist/js/bootstrap-touch-carousel.js", "dist/css/bootstrap-touch-carousel.css"],
+  "keywords": [
+    "bootstrap",
+    "carousel",
+    "touch",
+    "swipe",
+    "gestures"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
