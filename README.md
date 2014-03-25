@@ -1,7 +1,7 @@
 # Bootstrap TouchCarousel - _Feel's good!_
 [![Bower version](https://badge.fury.io/bo/bootstrap-touch-carousel.png)](http://badge.fury.io/bo/bootstrap-touch-carousel)
 
-__A drop-in perfection for [Twitter Bootstrap's Carousel (v3)](http://getbootstrap.com/javascript/#carousel) to enable gestures on touch devices.__
+__A drop-in perfection for [Twitter Bootstrap's Carousel (v3)](http://getbootstrap.com/javascript/#carousel) to enable gestures on touch devices.__<br>
 The Plugin uses [hammer.js, A javascript library for multi-touch gestures](http://eightmedia.github.io/hammer.js/) to enable touch gestures that feels awesome. If you just have a touch device handy, visit the [demo](http://ixisio.github.io/bootstrap-touch-carousel/) and feel it by yourself.
 
 
@@ -10,7 +10,7 @@ The Plugin uses [hammer.js, A javascript library for multi-touch gestures](http:
 
 * [Features](#features)
 * [The TouchCarousel in Action](#the-touchcarousel-in-action)
-* [Quick start: Get the plugin](#quick-start--get-the-plugin)
+* [Quick start: Get the plugin](#quick-start-get-the-plugin)
 * [Plugin Options](#plugin-options)
 * [How it works](#how-it-works)
 * [Contributing](#contributing)
