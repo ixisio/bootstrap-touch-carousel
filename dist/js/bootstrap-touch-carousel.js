@@ -1,5 +1,5 @@
 /*! 
- * bootstrap-touch-carousel v0.7.0
+ * bootstrap-touch-carousel v0.7.1
  * https://github.com/ixisio/bootstrap-touch-carousel.git 
  * 
  * Copyright (c) 2014 (ixisio) Andreas Klein

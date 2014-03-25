@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-touch-carousel",
-  "description": "A drop-in replacement for Twitter Bootstrap's Carousel (v3.00) to enable gestures on touch-enabled devices.",
+  "description": "A drop-in perfection for Twitter Bootstrap's Carousel (v3) to enable gestures on touch devices.",
   "version": "0.7.0",
   "keywords": [
     "bootstrap",
