@@ -203,6 +203,9 @@
       this.$indicators.find('.active').removeClass('active');
       this.$indicators.children().eq(index).addClass('active');
     }
+    
+    this.$element.trigger('slid.bs.carousel');
+
 
     return this;
   }
