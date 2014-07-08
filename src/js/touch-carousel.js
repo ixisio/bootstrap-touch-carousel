@@ -133,11 +133,29 @@
   }
 
   TouchCarousel.prototype.next = function() {
-    return this._showPane( this.current_pane+1 );
+    var $active   = this.$element.find('.item.active');
+    var $next     = $active.next();
+    var e = $.Event('slide.bs.carousel', { relatedTarget: $next[0], direction: 'left' });
+    this.$element.trigger(e);
+
+    this._showPane( this.current_pane+1 );
+
+    this.$element.trigger("slid");
+
+    return this;
   }
 
   TouchCarousel.prototype.prev = function() {
-    return this._showPane( this.current_pane-1 );
+    var $active   = this.$element.find('.item.active');
+    var $next     = $active.prev();
+    var e = $.Event('slide.bs.carousel', { relatedTarget: $next[0], direction: 'right' });
+    this.$element.trigger(e);
+
+    this._showPane( this.current_pane-1 );
+
+    this.$element.trigger("slid");
+
+    return this;
   }
 
   TouchCarousel.prototype._handleGestures = function( e ) {
