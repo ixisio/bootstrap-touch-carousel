@@ -58,7 +58,10 @@
   TouchCarousel.prototype._regTouchGestures = function() {
     this.$itemsWrapper
       .add(this.$indicators) // fixes issue #9
-      .hammer({ drag_lock_to_axis: true })
+      .hammer({ 
+        drag_lock_to_axis: true,
+        preventDefault: true,
+      })
       .on("release dragleft dragright swipeleft swiperight", $.proxy(this._handleGestures, this));
   }
 
@@ -159,8 +162,6 @@
   }
 
   TouchCarousel.prototype._handleGestures = function( e ) {
-    // disable browser scrolling
-    e.gesture.preventDefault();
 
     if(this.sliding) return;
 
