@@ -1,6 +1,8 @@
 # Bootstrap TouchCarousel - _Feel's good!_
 [![Bower version](https://badge.fury.io/bo/bootstrap-touch-carousel.png)](http://badge.fury.io/bo/bootstrap-touch-carousel)
 
+Forked from [bootstrap-touch-carousel](https://github.com/ixisio/bootstrap-touch-carousel) but trying to be more responsive to pull requests.
+
 __A drop-in perfection for [Twitter Bootstrap's Carousel (v3)](http://getbootstrap.com/javascript/#carousel) to enable gestures on touch devices.__<br>
 The Plugin uses [hammer.js, A javascript library for multi-touch gestures](http://eightmedia.github.io/hammer.js/) to enable touch gestures that feels awesome. If you just have a touch device handy, visit the [demo](http://ixisio.github.io/bootstrap-touch-carousel/) and feel it by yourself.
 
@@ -45,8 +47,8 @@ Three quick start options are available:
 
 - [Download the latest release](https://github.com/ixisio/bootstrap-touch-carousel/archive/master.zip)
 - Clone the repo: `git clone git://github.com/ixisio/bootstrap-touch-carousel.git`
-- Install with Bower: `bower install bootstrap-touch-carousel`.
-- Add as Bootstrap git submodule `git submodule add git://github.com/ixisio/bootstrap-touch-carousel.git /vendor/your-sm`
+- Install with Bower: `bower install bs-touch-carousel`.
+- Add as Bootstrap git submodule `git submodule add git://github.com/seydoggy/bootstrap-touch-carousel.git /vendor/your-sm`
 
 
 
@@ -118,6 +120,10 @@ Editor preferences are available in the editor config for easy use in common tex
 
 
 ## Changelog
+
+**0.7.2**
+* Trigger slide.bs.carousel & slid.
+* Prevent the default gesture on the browser
 
 **0.7.1**
 * Update for better documentation
