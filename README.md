@@ -106,22 +106,6 @@ Editor preferences are available in the editor config for easy use in common tex
 * `grunt bump` release management
 
 
-## Feature Requests / Future Tasks
-
-* Disable / Stop initialization if there is only one item [#6](https://github.com/ixisio/bootstrap-touch-carousel/issues/6)
-* Endless Loops (wrap)
-* ~~Live Resize~~ fixed in v0.5.0 [#5](https://github.com/ixisio/bootstrap-touch-carousel/issues/5)
-* Hammer.js custom build (use only whats required)
-* ~~MSPointer: Support pointer and gesture events. Tests needed!~~
-    Works perfectly! See hammer.js [compatibility table](https://github.com/EightMedia/hammer.js/wiki/Compatibility)
-* ~~Optimize indicator pills for touch~~ done! [#3](https://github.com/ixisio/bootstrap-touch-carousel/issues/3)
-* ~~Better Documentation~~ fixed in v0.7.1 [#20](https://github.com/ixisio/bootstrap-touch-carousel/pull/20)
-* Unit Tests (qunit)
-* ~~Register as [bower](http://bower.io) component~~ fixed in v0.7.1 [#20](https://github.com/ixisio/bootstrap-touch-carousel/pull/20)
-
-
-
-
 ## Copyright and license
 
 Copyright (c) 2014 ixisio Licensed under the MIT license.
