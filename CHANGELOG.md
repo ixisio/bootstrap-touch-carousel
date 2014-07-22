@@ -1,6 +1,7 @@
 # Changelog
 
 ### HEAD
+* Clean up documentation and featureRequest
 * Create separate CHANGELOG file
 * Prevent the default gesture on the browser (Merge #23)
 * Trigger bootstrap events (Merge #22)
