@@ -2,6 +2,7 @@
 
 ### HEAD
 * Code style refactoring
+* #16: Wrap js libs in IIFEs
 
 ### 0.8.0 - 2014-07-22
 * Clean up documentation and featureRequest
