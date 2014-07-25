@@ -47,11 +47,11 @@ module.exports = function(grunt) {
     },
 
     concat: {
-      options: {
-        banner: '<%= functionalScope.header %>',
-        footer: '<%= functionalScope.footer %>',
-        stripBanners: false
-      },
+      // options: {
+      //   banner: '<%= functionalScope.header %>',
+      //   footer: '<%= functionalScope.footer %>',
+      //   stripBanners: false
+      // },
       js: {
         src: [
           'src/js/transition.js',

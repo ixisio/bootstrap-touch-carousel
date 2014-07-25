@@ -1,6 +1,7 @@
 # Changelog
 
 ### HEAD
+* Code style refactoring
 
 ### 0.8.0 - 2014-07-22
 * Clean up documentation and featureRequest

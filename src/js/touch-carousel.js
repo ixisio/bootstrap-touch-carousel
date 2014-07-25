@@ -1,10 +1,17 @@
++function ($) {
+  "use strict";
+
+  /**
+   * Return whole plugin if touch is not supported
+   */
+  if (!("ontouchstart" in window || navigator.msMaxTouchPoints)) return false;
 
   // CONST
-  var NAMESPACE = 'touch-carousel',
+  var NAMESPACE = 'touch-carousel';
 
   // TouchCarousel Constructor
   // -------------------
-  TouchCarousel = function (element, options) {
+  var TouchCarousel = function (element, options) {
     this.$element       = $(element)
     this.$itemsWrapper  = this.$element.find('.carousel-inner')
     this.$items         = this.$element.find('.item')
@@ -58,7 +65,7 @@
   TouchCarousel.prototype._regTouchGestures = function() {
     this.$itemsWrapper
       .add(this.$indicators) // fixes issue #9
-      .hammer({ 
+      .hammer({
         drag_lock_to_axis: true,
         preventDefault: true,
       })
@@ -204,7 +211,7 @@
       this.$indicators.find('.active').removeClass('active');
       this.$indicators.children().eq(index).addClass('active');
     }
-    
+
     this.$element.trigger('slid.bs.carousel');
 
 
@@ -261,4 +268,6 @@
     }
 
     e.preventDefault()
-  })
+  });
+
+}(window.jQuery);
