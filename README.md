@@ -1,4 +1,4 @@
-# Bootstrap TouchCarousel - _Feel's good!_
+# Bootstrap TouchCarousel - _Feels good!_
 [![Bower version](https://badge.fury.io/bo/bootstrap-touch-carousel.png)](http://badge.fury.io/bo/bootstrap-touch-carousel)
 
 __A drop-in perfection for [Twitter Bootstrap's Carousel (v3)](http://getbootstrap.com/javascript/#carousel) to enable gestures on touch devices.__<br>
