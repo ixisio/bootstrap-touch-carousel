@@ -212,7 +212,7 @@
       this.$indicators.children().eq(index).addClass('active');
     }
 
-    this.$element.trigger('slid.bs.carousel');
+    this.$element.trigger('slide.bs.carousel');
 
 
     return this;
