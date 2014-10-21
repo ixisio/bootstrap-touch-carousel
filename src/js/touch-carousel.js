@@ -74,11 +74,12 @@
 
   TouchCarousel.prototype._setPaneDimensions= function() {
     this.pane_width = this.$element.width();
+    this.item_width = this.pane_width - this.$items.css("padding-left").replace("px", "") - this.$items.css("padding-right").replace("px", "");
     this.pane_count = this.$items.length;
 
     // Set items & wrapper to fixed width
     this.$itemsWrapper.width( this.pane_width * this.pane_count );
-    this.$items.width( this.pane_width );
+    this.$items.width( this.item_width );
   }
 
   TouchCarousel.prototype._showPane= function( index ) {
