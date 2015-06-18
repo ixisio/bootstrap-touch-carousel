@@ -1,3 +1,6 @@
+# ***This package is no longer maintained! We're searching for contributors***
+
+
 # Bootstrap TouchCarousel - _Feels good!_
 [![Bower version](https://badge.fury.io/bo/bootstrap-touch-carousel.png)](http://badge.fury.io/bo/bootstrap-touch-carousel)
 
