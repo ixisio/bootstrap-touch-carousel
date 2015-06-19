@@ -49,8 +49,9 @@ module.exports = function(grunt) {
     concat: {
       js: {
         src: [
+          'vendor/jquery-hammerjs/jquery.hammer-full.js',
           'src/js/transition.js',
-          'src/js/touch-carousel.js',
+          'src/js/touch-carousel.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
@@ -62,8 +63,8 @@ module.exports = function(grunt) {
         report: 'min'
       },
       js: {
-        src: ['<%= concat.js.dest %>', 'vendor/hammerjs/dist/jquery.hammer.js',],
-        dest: 'dist/js/<%= pkg.name %>.js'
+        src: [ '<%= concat.js.dest %>' ],
+        dest: 'dist/js/<%= pkg.name %>.min.js'
       }
     },
 
