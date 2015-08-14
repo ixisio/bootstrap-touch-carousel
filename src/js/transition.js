@@ -4,7 +4,7 @@
   /**
    * Return whole plugin if touch is not supported
    */
-  if (!("ontouchstart" in window || navigator.msMaxTouchPoints)) {
+  if (!("ontouchstart" in window || "PointerEvent" in window || navigator.msMaxTouchPoints)) {
     return false;
   }
 

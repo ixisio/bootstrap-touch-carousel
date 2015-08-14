@@ -7,7 +7,7 @@ $(function () {
       // console.log( "ontouchstart" in window ? true: false); // return true in PhantomJS
 
       test("Should run plugin because touchevents are enabled", function() {
-        var hasTouchEvents = ("ontouchstart" in window || navigator.msMaxTouchPoints) ? true : false;
+        var hasTouchEvents = ("ontouchstart" in window || "PointerEvent" in window || navigator.msMaxTouchPoints) ? true : false;
         equal(hasTouchEvents, true, "touch events should be enabled")
         ok(typeof $(document.body).carousel().data('touch-carousel') === "object", "TouchCarousel Plugin is running")
       })

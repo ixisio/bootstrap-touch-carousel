@@ -4,6 +4,9 @@
 * Code style refactoring
 * #16: Wrap js libs in IIFEs
 
+### 0.8.1 - 2015-08-14
+* Update touch support detection for Edge
+
 ### 0.8.0 - 2014-07-22
 * Clean up documentation and featureRequest
 * Create separate CHANGELOG file

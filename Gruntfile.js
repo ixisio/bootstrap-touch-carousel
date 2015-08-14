@@ -27,7 +27,7 @@ module.exports = function(grunt) {
       header: '+function ($) {\n' +
               '  "use strict";\n' +
               '\n' +
-              '  if (!("ontouchstart" in window || navigator.msMaxTouchPoints)) return false \n\n',
+              '  if (!("ontouchstart" in window || "PointerEvent" in window || navigator.msMaxTouchPoints)) return false \n\n',
       footer: '}(window.jQuery);'
     },
 
